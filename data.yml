@@ -1,1 +1,9 @@
-path
+train: yolo_dataset/train/
+val: yolo_dataset/val/
+test: yolo_dataset/test/
+
+nc: 1
+names: ['ROI']
+
+
+names: ['Spine']

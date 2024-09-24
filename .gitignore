@@ -1,5 +1,4 @@
 # Byte-compiled / optimized / DLL files
-yolo_dataset/
 __pycache__/
 *.py[cod]
 *$py.class

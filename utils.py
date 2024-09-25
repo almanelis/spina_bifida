@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 def visualize_distribution(df):
     # Подсчет количества элементов в каждом классе
-    class_counts = df['pathology'].value_counts()
+    class_counts = df['class'].value_counts()
 
     fig, ax = plt.subplots(figsize=(6, 4))
     bars = ax.bar([0, 1], class_counts.values)
@@ -25,13 +25,13 @@ def visualize_distribution(df):
 
 def visualize_ba(df, balanced_dataset):
     df['Class'] = df['pathology']
-    balanced_dataset['pathology'] = balanced_dataset['pathology']
+    balanced_dataset['class'] = balanced_dataset['class']
 
     # Подсчет количества элементов в каждом классе до обработки
     class_counts_before = df['pathology'].value_counts()
 
     # Подсчет количества элементов в каждом классе после обработки
-    class_counts_after = balanced_dataset['pathology'].value_counts()
+    class_counts_after = balanced_dataset['class'].value_counts()
 
     # Создание subplot
     fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, figsize=(12, 5))
